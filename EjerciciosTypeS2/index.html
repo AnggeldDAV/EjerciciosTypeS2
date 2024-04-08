@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Ejercicio Clases 4</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+    <header style="height:200px;"></header>
+    <div class="container" style="background-color:cornflowerblue;">
+        <div class="container d-flex mb-3">
+            <input id="nombre" type="text" placeholder="Nombre"/>
+            <input id="nombreIntermedio" type="text" placeholder="Segundo Nombre"/>
+            <div id="valid" class="ms-auto bd-highlight"style="background-color:lightblue; height:50px; width:150px;"></div>
+        </div>
+        <div class="container">
+            <input id="apellido1" class="mb-3" type="text" placeholder="Primer Apellido"/>
+            <input id="apellido2" class="mb-3" type="text" placeholder="Segundo Apellido"/>
+        </div>
+        <div class="container">
+            <input id="anoNacimiento" class="mb-3" type="text" placeholder="Año de nacimiento"/>
+            <input id="identificativo" class="mb-3" type="text" placeholder="Identificativo"/>
+        </div>
+        <div class="container d-flex justify-content-between">
+            <input id="activo" class="mb-3" type="text" placeholder="Activo" />
+            <input id="boton" class="mb-3" type="button" value="Mostrar" />
+        </div>
+        
+    </div>
+    <div id="resultado">
+
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
