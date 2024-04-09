@@ -36,21 +36,14 @@ class MostradorEspanol implements IMostradorPersona {
 let validador = new ValidadorIngles;
 let mostrador = new MostradorIngles;
 function Datos() {
-    let pNombre = (<HTMLInputElement>document.getElementById("nombre")).value;
-    let nombreI = (<HTMLInputElement>document.getElementById("nombreIntermedio")).value;
-    let ape1 = (<HTMLInputElement>document.getElementById("apellido1")).value;
-    let ape2 = (<HTMLInputElement>document.getElementById("apellido2")).value;
-    let ano = Number((<HTMLInputElement>document.getElementById("anoNacimiento")).value);
-    let ide = (<HTMLInputElement>document.getElementById("identificativo")).value;
-    let act = Boolean((<HTMLInputElement>document.getElementById("activo")).value);
     let persona1 = new Persona();
-    persona1.primerNombre = pNombre;
-    persona1.nombreIntermedio = nombreI;
-    persona1.apellido1 = ape1;
-    persona1.apellido2 = ape2;
-    persona1.anoNacimiento = ano;
-    persona1.identificativo = ide;
-    persona1.activo = act;
+    persona1.primerNombre = (<HTMLInputElement>document.getElementById("nombre")).value;
+    persona1.nombreIntermedio = (<HTMLInputElement>document.getElementById("nombreIntermedio")).value;
+    persona1.apellido1 = (<HTMLInputElement>document.getElementById("apellido1")).value;
+    persona1.apellido2 = (<HTMLInputElement>document.getElementById("apellido2")).value;
+    persona1.anoNacimiento = Number((<HTMLInputElement>document.getElementById("anoNacimiento")).value);
+    persona1.identificativo = (<HTMLInputElement>document.getElementById("identificativo")).value;
+    persona1.activo = Boolean((<HTMLInputElement>document.getElementById("activo")).value);
     if (validador.isValid(persona1)) {
         document.getElementById("valid")!.style.backgroundColor = "green";
     } else {
