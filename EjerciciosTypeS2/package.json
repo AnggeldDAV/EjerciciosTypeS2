@@ -2,7 +2,7 @@
   "name": "ejerciciostypes2",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "ejercicioclases6.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc --build",
