@@ -6,7 +6,7 @@
       "request": "launch",
       "name": "Launch Program",
       "skipFiles": [ "<node_internals>/**" ],
-      "program": "${workspaceFolder}/ejercicioclases6.ts",
+      "program": "${workspaceFolder}/ejercicioclases7.ts",
       "cwd": "${workspaceFolder}",
       "console": "externalTerminal"
     }
