@@ -70,18 +70,26 @@ class OrdenaPorEdad {
         return BichoA.edad + BichoB.edad;
     }
 }
-Ordenacion = new OrdenaPorEdad();
-MiJaulaABC.ordena();
-MiJaulaABC.muestra();
+let OrdenacionEdad = new OrdenaPorEdad();
+let MiJaulaDEF = new Jaula(OrdenacionEdad, Mostrado);
+MiJaulaDEF.add(Elefante);
+MiJaulaDEF.add(Rinoceronte);
+MiJaulaDEF.add(Koala);
+MiJaulaDEF.ordena();
+MiJaulaDEF.muestra();
 //� Tambi�n queremos ordenarlos por peso, de m�s flaco a m�s gordo.
 class OrdenaPorPeso {
     ordena(BichoA, BichoB) {
         return BichoA.peso + BichoB.peso;
     }
 }
-Ordenacion = new OrdenaPorPeso();
-MiJaulaABC.ordena();
-MiJaulaABC.muestra();
+let OrdenacionPeso = new OrdenaPorPeso();
+let MiJaulaGHI = new Jaula(OrdenacionPeso, Mostrado);
+MiJaulaGHI.add(Elefante);
+MiJaulaGHI.add(Rinoceronte);
+MiJaulaGHI.add(Koala);
+MiJaulaGHI.ordena();
+MiJaulaGHI.muestra();
 //� Queremos mostrarlo ahora de forma distinta(el animalito { jumbo } tiene una edad
 //de { edad } y un { peso } estimado en peso
 class MuestraTipo02 {
@@ -89,6 +97,11 @@ class MuestraTipo02 {
         console.log(`el animalito ${BichoA.nombre} tiene una edad de ${BichoA.edad} y un ${BichoA.peso} estimado en peso`);
     }
 }
-Mostrado = new MuestraTipo02();
-MiJaulaABC.muestra();
+let Mostrado02 = new MuestraTipo02();
+let MiJaulaJKL = new Jaula(OrdenacionPeso, Mostrado02);
+MiJaulaJKL.add(Elefante);
+MiJaulaJKL.add(Rinoceronte);
+MiJaulaJKL.add(Koala);
+MiJaulaJKL.ordena();
+MiJaulaJKL.muestra();
 //# sourceMappingURL=ejercicioclases7.js.map

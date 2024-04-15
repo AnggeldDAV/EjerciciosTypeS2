@@ -73,25 +73,35 @@ MiJaulaABC.add(Rinoceronte);
 MiJaulaABC.add(Koala);
 MiJaulaABC.muestra();
 MiJaulaABC.ordena();
-MiJaulaABC.muestra();//Que se quiere:
+MiJaulaABC.muestra();
+
+//Que se quiere:
 //• Queremos ahora ordenar nuestra colección por la edad de más joven a más viejo.
 class OrdenaPorEdad implements IOrdenableBicho {
     ordena(BichoA: Bicho, BichoB: Bicho): number {
         return BichoA.edad + BichoB.edad;
     }
 }
-Ordenacion = new OrdenaPorEdad();
-MiJaulaABC.ordena();
-MiJaulaABC.muestra();
+let OrdenacionEdad = new OrdenaPorEdad();
+let MiJaulaDEF: Jaula = new Jaula(OrdenacionEdad, Mostrado);
+MiJaulaDEF.add(Elefante);
+MiJaulaDEF.add(Rinoceronte);
+MiJaulaDEF.add(Koala);
+MiJaulaDEF.ordena();
+MiJaulaDEF.muestra();
 //• También queremos ordenarlos por peso, de más flaco a más gordo.
 class OrdenaPorPeso implements IOrdenableBicho {
     ordena(BichoA: Bicho, BichoB: Bicho): number {
         return BichoA.peso + BichoB.peso;
     }
 }
-Ordenacion = new OrdenaPorPeso();
-MiJaulaABC.ordena();
-MiJaulaABC.muestra();
+let OrdenacionPeso = new OrdenaPorPeso();
+let MiJaulaGHI: Jaula = new Jaula(OrdenacionPeso, Mostrado);
+MiJaulaGHI.add(Elefante);
+MiJaulaGHI.add(Rinoceronte);
+MiJaulaGHI.add(Koala);
+MiJaulaGHI.ordena();
+MiJaulaGHI.muestra();
 //• Queremos mostrarlo ahora de forma distinta(el animalito { jumbo } tiene una edad
 //de { edad } y un { peso } estimado en peso
 class MuestraTipo02 implements IMostrable {
@@ -99,5 +109,10 @@ class MuestraTipo02 implements IMostrable {
         console.log(`el animalito ${BichoA.nombre} tiene una edad de ${BichoA.edad} y un ${BichoA.peso} estimado en peso`);
     }
 }
-Mostrado = new MuestraTipo02();
-MiJaulaABC.muestra();
+let Mostrado02 = new MuestraTipo02();
+let MiJaulaJKL = new Jaula(OrdenacionPeso, Mostrado02);
+MiJaulaJKL.add(Elefante);
+MiJaulaJKL.add(Rinoceronte);
+MiJaulaJKL.add(Koala);
+MiJaulaJKL.ordena();
+MiJaulaJKL.muestra();
