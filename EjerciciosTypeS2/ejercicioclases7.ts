@@ -64,7 +64,6 @@ class Jaula {
 let Elefante: Bicho = new Bicho("Jumbo", 45, 898);
 let Rinoceronte: Bicho = new Bicho("Willie", 1, 1);
 let Koala: Bicho = new Bicho("Kolinger", 56, 67);
-
 let Ordenacion: IOrdenableBicho = new OrdenaPorNombre();
 let Mostrado: IMostrable = new MuestraTipo01();
 let MiJaulaABC: Jaula = new Jaula(Ordenacion, Mostrado);
@@ -73,15 +72,17 @@ MiJaulaABC.add(Rinoceronte);
 MiJaulaABC.add(Koala);
 MiJaulaABC.muestra();
 MiJaulaABC.ordena();
+console.log("Ordena por nombre:-----------------------------------");
 MiJaulaABC.muestra();
 
 //Que se quiere:
 //• Queremos ahora ordenar nuestra colección por la edad de más joven a más viejo.
 class OrdenaPorEdad implements IOrdenableBicho {
     ordena(BichoA: Bicho, BichoB: Bicho): number {
-        return BichoA.edad + BichoB.edad;
+        return BichoA.edad - BichoB.edad;
     }
 }
+console.log("Ordena por Edad:-----------------------------------");
 let OrdenacionEdad = new OrdenaPorEdad();
 let MiJaulaDEF: Jaula = new Jaula(OrdenacionEdad, Mostrado);
 MiJaulaDEF.add(Elefante);
@@ -92,9 +93,10 @@ MiJaulaDEF.muestra();
 //• También queremos ordenarlos por peso, de más flaco a más gordo.
 class OrdenaPorPeso implements IOrdenableBicho {
     ordena(BichoA: Bicho, BichoB: Bicho): number {
-        return BichoA.peso + BichoB.peso;
+        return BichoA.peso - BichoB.peso;
     }
 }
+console.log("Ordena por Peso:-----------------------------------");
 let OrdenacionPeso = new OrdenaPorPeso();
 let MiJaulaGHI: Jaula = new Jaula(OrdenacionPeso, Mostrado);
 MiJaulaGHI.add(Elefante);

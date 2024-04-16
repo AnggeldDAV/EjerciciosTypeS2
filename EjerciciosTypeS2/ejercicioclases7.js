@@ -62,14 +62,16 @@ MiJaulaABC.add(Rinoceronte);
 MiJaulaABC.add(Koala);
 MiJaulaABC.muestra();
 MiJaulaABC.ordena();
+console.log("Ordena por nombre:-----------------------------------");
 MiJaulaABC.muestra();
 //Que se quiere:
 //� Queremos ahora ordenar nuestra colecci�n por la edad de m�s joven a m�s viejo.
 class OrdenaPorEdad {
     ordena(BichoA, BichoB) {
-        return BichoA.edad + BichoB.edad;
+        return BichoA.edad - BichoB.edad;
     }
 }
+console.log("Ordena por Edad:-----------------------------------");
 let OrdenacionEdad = new OrdenaPorEdad();
 let MiJaulaDEF = new Jaula(OrdenacionEdad, Mostrado);
 MiJaulaDEF.add(Elefante);
@@ -80,9 +82,10 @@ MiJaulaDEF.muestra();
 //� Tambi�n queremos ordenarlos por peso, de m�s flaco a m�s gordo.
 class OrdenaPorPeso {
     ordena(BichoA, BichoB) {
-        return BichoA.peso + BichoB.peso;
+        return BichoA.peso - BichoB.peso;
     }
 }
+console.log("Ordena por Peso:-----------------------------------");
 let OrdenacionPeso = new OrdenaPorPeso();
 let MiJaulaGHI = new Jaula(OrdenacionPeso, Mostrado);
 MiJaulaGHI.add(Elefante);
